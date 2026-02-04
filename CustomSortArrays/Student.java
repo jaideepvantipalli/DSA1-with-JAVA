@@ -1,0 +1,101 @@
+import java.util.*;
+public class Student{
+	int rollno,marks;
+	String sname,branch;
+	double cgpa;
+	Student(int rollno,String sname,String branch,int marks,double cgpa){
+	this.rollno=rollno;
+	this.sname=sname;
+	this.branch=branch;
+	this.marks=marks;
+	this.cgpa=cgpa;
+	}
+    public String toString() {
+            return "Name: " + sname +
+                   ", Roll No: " + rollno +
+                   ", branch: " + branch +
+                   ", Marks: " + marks +
+                   ", CGPA: " + cgpa;
+    }
+}
+class Main{
+	public static void main(String[] args){
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter no of records:");
+	int n=sc.nextInt();
+    Student sarr[]=new Student[n];
+	for(int i=0;i<n;i++){
+		System.out.println("Enter student "+(i+1)+" roll no :");
+		int rno=sc.nextInt();
+		System.out.println("Enter student "+(i+1)+" name :");
+		String name=sc.next();
+		System.out.println("Enter student "+(i+1)+" branch :");
+		String br=sc.next();
+		System.out.println("Enter student "+(i+1)+" marks :");
+		int marks=sc.nextInt();
+		System.out.println("Enter student "+(i+1)+" cgpa :");
+		double gpa=sc.nextDouble();
+		sarr[i]= new Student(rno,name,br,marks,gpa);
+	}
+	System.out.println("Before Sorting");
+	for(Student s:sarr){
+		System.out.println(s);
+	}
+while(true){
+System.out.println("1.SortByRollnoAscending");
+System.out.println("2.SortByRollnoDescending");
+System.out.println("3.SortByNameAscending");
+System.out.println("4.SortByNameDescending");
+System.out.println("5.SortByBranchAscending");
+System.out.println("6.SortByBranchDescending");
+System.out.println("7.SortByMarksAscending");
+System.out.println("8.SortByMarksDescending");
+System.out.println("9.SortByCgpaAscending");
+System.out.println("10.SortByCgpaDescending");
+System.out.println("11.Exit");
+System.out.println("Enter sorting CHOICE : ");
+int choice=sc.nextInt();
+switch (choice) {
+  case 1:
+    Arrays.sort(sarr,new SortByRollnoAscending());
+    break;
+  case 2:
+    Arrays.sort(sarr,new SortByRollnoDescending());
+    break;
+  case 3:
+    Arrays.sort(sarr,new SortByNameAscending());
+    break;
+  case 4:
+    Arrays.sort(sarr,new SortByNameDescending());
+    break;
+  case 5:
+    Arrays.sort(sarr,new SortByBranchAscending());
+    break;
+  case 6:
+    Arrays.sort(sarr,new SortByBranchDescending());
+    break;
+  case 7:
+    Arrays.sort(sarr,new SortByMarksAscending());
+    break;
+	case 8:
+    Arrays.sort(sarr,new SortByMarksDescending());
+    break;
+  case 9:
+    Arrays.sort(sarr,new SortByCgpaAscending());
+    break;
+  case 10:
+    Arrays.sort(sarr,new SortByCgpaDescending());
+    break;
+	case 11:
+	System.exit(0);
+   default:
+   System.out.println("Enter valid Choice!!!!");
+}
+System.out.println("After Sorting");
+	for(Student s:sarr){
+		System.out.println(s);
+	}
+}
+}
+sc.close();
+}

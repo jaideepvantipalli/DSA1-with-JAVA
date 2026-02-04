@@ -1,0 +1,232 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.HashSet;
+public class Panagram4{
+      public static void main(String[] args) throws Exception {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter the Sentence :");
+        String s=br.readLine();
+        System.out.print(usingHashSet(s));
+  }
+  static boolean usingHashSet(String s){
+    if(s.length()<26) return false;
+    HashSet<Integer> hs =new HashSet<>();
+    s=s.toLowerCase();
+    for(int i=0;i<s.length();i++){
+      int ch = s.charAt(i);
+      if(ch<='z' && ch>='a') 
+      hs.add(ch);
+    }
+    return hs.size() == 26;
+  }
+}
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+public class Panagram3{
+      public static void main(String[] args) throws Exception {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter the Sentence :");
+        String s=br.readLine();
+        System.out.println("is panagram : "+usingContainsMethod(s));
+  }
+  static boolean usingContainsMethod(String s){
+    s=s.toLowerCase();
+    String s1 = "abcdefghijklmnopqrstuvwxyz";
+    for(int i=0;i<s1.length();i++){
+      if(s.indexOf(s1.charAt(i)) == -1 ) return false;
+    }
+    return true;
+  }
+}
+
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+public class Panagram2{
+      public static void main(String[] args) throws Exception {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter the Sentence :");
+        String s=br.readLine();
+        System.out.println("is panagram: "+usingArray(s));
+  }
+
+  static boolean usingArray(String s){
+    if(s.length()<26) return false;
+    s = s.toLowerCase();
+    int a[] = new int[26];
+    for(int i=0;i<s.length();i++){
+      char ch = s.charAt(i);
+      if(ch<='z' && ch>='a') a[ch-'a']++;
+    }
+    for(int i=0;i<26;i++){
+      if(a[i] == 0) return false;
+    }
+    return true;
+  }
+}
+
+import java.io.BufferedReader;
+import java.io.IOException; 
+import java.io.InputStreamReader;
+import java.util.HashMap;
+public class Panagram1 {
+      public static void main(String[] args) throws IOException{
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter the Sentence :");
+        String s=br.readLine();
+        System.out.println("is panagram : "+usingHashMap(s));
+  }
+  
+  static boolean usingHashMap(String s){
+    if(s.length()<26) return false;
+    s=s.toLowerCase();
+    HashMap<Character,Integer> hm = new HashMap<>();
+    for(int i=0;i<s.length();i++){
+      char ch = s.charAt(i);
+      if(ch<='z' && ch>='a') 
+        hm.put(ch, hm.getOrDefault(ch, 0)+1);
+    }
+    return hm.size() == 26;
+  }
+}
+
+
+import java.util.Scanner;
+public class Anagram5{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter String 1 : ");
+        String s1=sc.next();
+        System.out.println("Enter String 2 : ");
+        String s2=sc.next();
+        System.out.println("is anagaram : "+usinguserdefinedhashmap(s1,s2));
+    }
+    static boolean usinguserdefinedhashmap(String s1,String s2){
+        if(s1.length()!=s2.length()) return false;
+        int a[] = new int[26];
+
+        for(int i=0;i<s1.length();i++)
+        {
+            char ch1 = s1.charAt(i);
+            char ch2 = s2.charAt(i);
+            a[ch1-'a']++;
+            a[ch2-'a']--;
+        }
+        for(int i=0;i<26;i++)
+            if(a[i]!=0) return false;
+        return true;
+    }
+}
+
+import java.util.Arrays;
+import java.util.Scanner;
+public class Anagram4{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter String 1 : ");
+        String s1=sc.next();
+        System.out.println("Enter String 2 : ");
+        String s2=sc.next();
+        System.out.println("is anagaram : "+usinguserdefinedhashmaps(s1,s2));
+    }
+
+    static boolean usinguserdefinedhashmaps(String s1,String s2){
+        if(s1.length()!=s2.length())
+            return false;
+        int a[] = new int[26];
+        int b[] = new int[26];
+        for(int i=0;i<s1.length();i++)
+        {
+            char ch1 = s1.charAt(i);
+            char ch2 = s2.charAt(i);
+            a[ch1-'a']++;
+            b[ch2-'a']++;
+        }
+        return Arrays.equals(a,b);
+    }
+}
+
+
+import java.util.HashMap;
+import java.util.Scanner;
+public class Anagram3{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter String 1 : ");
+        String s1=sc.next();
+        System.out.println("Enter String 2 : ");
+        String s2=sc.next();
+        System.out.println("is anagaram : "+usinghashmap(s1,s2));
+        sc.close();
+    }
+
+    static boolean usinghashmap(String s1,String s2){
+        if (s1.length() != s2.length()) return false;
+        HashMap<Character,Integer> hm = new HashMap<>();
+
+        for (int i=0;i<s1.length();i++)
+            hm.put(s1.charAt(i),hm.getOrDefault(s1.charAt(i), 0) + 1);
+
+        for (int i=0;i<s1.length();i++) {
+            if (!hm.containsKey(s2.charAt(i))) return false;
+            hm.put(s2.charAt(i), hm.get(s2.charAt(i)) - 1);
+            if (hm.get(s2.charAt(i))==0) 
+            hm.remove(s2.charAt(i));
+        }
+        return hm.isEmpty();
+    }
+}
+
+import java.util.HashMap;
+import java.util.Scanner;
+public class Anagram2{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter String 1 : ");
+        String s1=sc.next();
+        System.out.println("Enter String 2 : ");
+        String s2=sc.next();
+        System.out.println("is anagaram : "+usinghashmaps(s1,s2));
+        sc.close();
+    }
+
+    static boolean usinghashmaps(String s1,String s2){
+        if(s1.length()!=s2.length()) return false;
+        HashMap<Character,Integer> hm1 = new HashMap<>();
+        HashMap<Character,Integer> hm2 = new HashMap<>();
+
+        for(int i=0;i<s1.length();i++)
+        {
+            hm1.put(s1.charAt(i),hm1.getOrDefault(s1.charAt(i),0)+1);
+            hm2.put(s2.charAt(i),hm2.getOrDefault(s2.charAt(i),0)+1);
+        }
+        return hm1.equals(hm2);
+    }
+}
+
+import java.util.Arrays;
+import java.util.Scanner;
+public class Anagram1{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter String 1 : ");
+        String s1=sc.next();
+        System.out.println("Enter String 2 : ");
+        String s2=sc.next();
+        System.out.println("is anagaram : "+usingsorting(s1,s2));
+    }
+
+    static boolean usingsorting(String s1,String s2){
+        if(s1.length()!=s2.length()) return false;
+        String s11 = s1.toLowerCase();
+        String s22 = s2.toLowerCase();
+        char[] ch1 = s11.toCharArray();
+        char[] ch2 = s22.toCharArray();
+        Arrays.sort(ch1);
+        Arrays.sort(ch2);
+        s1 = String.valueOf(ch1);
+        s2 = String.valueOf(ch2);
+        return s1.equals(s2);
+    }
+}

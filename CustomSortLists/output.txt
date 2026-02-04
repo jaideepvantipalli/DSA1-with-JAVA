@@ -1,0 +1,264 @@
+D:\MCCP-1>javac Student.java
+
+D:\MCCP-1>java Main
+Enter no of records:
+5
+Enter student 1 roll no :
+4
+Enter student 1 name :
+jaideep
+Enter student 1 branch :
+cse
+Enter student 1 marks :
+500
+Enter student 1 cgpa :
+9.8
+Enter student 2 roll no :
+2
+Enter student 2 name :
+komesh
+Enter student 2 branch :
+cse
+Enter student 2 marks :
+499
+Enter student 2 cgpa :
+9.8
+Enter student 3 roll no :
+5
+Enter student 3 name :
+mahesh
+Enter student 3 branch :
+cse
+Enter student 3 marks :
+300
+Enter student 3 cgpa :
+7.0
+Enter student 4 roll no :
+1
+Enter student 4 name :
+kiran
+Enter student 4 branch :
+eee
+Enter student 4 marks :
+499
+Enter student 4 cgpa :
+8.0
+Enter student 5 roll no :
+3
+Enter student 5 name :
+ramteja
+Enter student 5 branch :
+mech
+Enter student 5 marks :
+444
+Enter student 5 cgpa :
+9.99
+Before Sorting
+Name: jaideep, Roll No: 4, branch: cse, Marks: 500, CGPA: 9.8
+Name: komesh, Roll No: 2, branch: cse, Marks: 499, CGPA: 9.8
+Name: mahesh, Roll No: 5, branch: cse, Marks: 300, CGPA: 7.0
+Name: kiran, Roll No: 1, branch: eee, Marks: 499, CGPA: 8.0
+Name: ramteja, Roll No: 3, branch: mech, Marks: 444, CGPA: 9.99
+1.SortByRollnoAscending
+2.SortByRollnoDescending
+3.SortByNameAscending
+4.SortByNameDescending
+5.SortByBranchAscending
+6.SortByBranchDescending
+7.SortByMarksAscending
+8.SortByMarksDescending
+9.SortByCgpaAscending
+10.SortByCgpaDescending
+11.Exit
+Enter sorting CHOICE :
+1
+After Sorting
+Name: kiran, Roll No: 1, branch: eee, Marks: 499, CGPA: 8.0
+Name: komesh, Roll No: 2, branch: cse, Marks: 499, CGPA: 9.8
+Name: ramteja, Roll No: 3, branch: mech, Marks: 444, CGPA: 9.99
+Name: jaideep, Roll No: 4, branch: cse, Marks: 500, CGPA: 9.8
+Name: mahesh, Roll No: 5, branch: cse, Marks: 300, CGPA: 7.0
+1.SortByRollnoAscending
+2.SortByRollnoDescending
+3.SortByNameAscending
+4.SortByNameDescending
+5.SortByBranchAscending
+6.SortByBranchDescending
+7.SortByMarksAscending
+8.SortByMarksDescending
+9.SortByCgpaAscending
+10.SortByCgpaDescending
+11.Exit
+Enter sorting CHOICE :
+2
+After Sorting
+Name: mahesh, Roll No: 5, branch: cse, Marks: 300, CGPA: 7.0
+Name: jaideep, Roll No: 4, branch: cse, Marks: 500, CGPA: 9.8
+Name: ramteja, Roll No: 3, branch: mech, Marks: 444, CGPA: 9.99
+Name: komesh, Roll No: 2, branch: cse, Marks: 499, CGPA: 9.8
+Name: kiran, Roll No: 1, branch: eee, Marks: 499, CGPA: 8.0
+1.SortByRollnoAscending
+2.SortByRollnoDescending
+3.SortByNameAscending
+4.SortByNameDescending
+5.SortByBranchAscending
+6.SortByBranchDescending
+7.SortByMarksAscending
+8.SortByMarksDescending
+9.SortByCgpaAscending
+10.SortByCgpaDescending
+11.Exit
+Enter sorting CHOICE :
+3
+After Sorting
+Name: jaideep, Roll No: 4, branch: cse, Marks: 500, CGPA: 9.8
+Name: kiran, Roll No: 1, branch: eee, Marks: 499, CGPA: 8.0
+Name: komesh, Roll No: 2, branch: cse, Marks: 499, CGPA: 9.8
+Name: mahesh, Roll No: 5, branch: cse, Marks: 300, CGPA: 7.0
+Name: ramteja, Roll No: 3, branch: mech, Marks: 444, CGPA: 9.99
+1.SortByRollnoAscending
+2.SortByRollnoDescending
+3.SortByNameAscending
+4.SortByNameDescending
+5.SortByBranchAscending
+6.SortByBranchDescending
+7.SortByMarksAscending
+8.SortByMarksDescending
+9.SortByCgpaAscending
+10.SortByCgpaDescending
+11.Exit
+Enter sorting CHOICE :
+4
+After Sorting
+Name: ramteja, Roll No: 3, branch: mech, Marks: 444, CGPA: 9.99
+Name: mahesh, Roll No: 5, branch: cse, Marks: 300, CGPA: 7.0
+Name: komesh, Roll No: 2, branch: cse, Marks: 499, CGPA: 9.8
+Name: kiran, Roll No: 1, branch: eee, Marks: 499, CGPA: 8.0
+Name: jaideep, Roll No: 4, branch: cse, Marks: 500, CGPA: 9.8
+1.SortByRollnoAscending
+2.SortByRollnoDescending
+3.SortByNameAscending
+4.SortByNameDescending
+5.SortByBranchAscending
+6.SortByBranchDescending
+7.SortByMarksAscending
+8.SortByMarksDescending
+9.SortByCgpaAscending
+10.SortByCgpaDescending
+11.Exit
+Enter sorting CHOICE :
+5
+After Sorting
+Name: mahesh, Roll No: 5, branch: cse, Marks: 300, CGPA: 7.0
+Name: komesh, Roll No: 2, branch: cse, Marks: 499, CGPA: 9.8
+Name: jaideep, Roll No: 4, branch: cse, Marks: 500, CGPA: 9.8
+Name: kiran, Roll No: 1, branch: eee, Marks: 499, CGPA: 8.0
+Name: ramteja, Roll No: 3, branch: mech, Marks: 444, CGPA: 9.99
+1.SortByRollnoAscending
+2.SortByRollnoDescending
+3.SortByNameAscending
+4.SortByNameDescending
+5.SortByBranchAscending
+6.SortByBranchDescending
+7.SortByMarksAscending
+8.SortByMarksDescending
+9.SortByCgpaAscending
+10.SortByCgpaDescending
+11.Exit
+Enter sorting CHOICE :
+6
+After Sorting
+Name: ramteja, Roll No: 3, branch: mech, Marks: 444, CGPA: 9.99
+Name: kiran, Roll No: 1, branch: eee, Marks: 499, CGPA: 8.0
+Name: mahesh, Roll No: 5, branch: cse, Marks: 300, CGPA: 7.0
+Name: komesh, Roll No: 2, branch: cse, Marks: 499, CGPA: 9.8
+Name: jaideep, Roll No: 4, branch: cse, Marks: 500, CGPA: 9.8
+1.SortByRollnoAscending
+2.SortByRollnoDescending
+3.SortByNameAscending
+4.SortByNameDescending
+5.SortByBranchAscending
+6.SortByBranchDescending
+7.SortByMarksAscending
+8.SortByMarksDescending
+9.SortByCgpaAscending
+10.SortByCgpaDescending
+11.Exit
+Enter sorting CHOICE :
+7
+After Sorting
+Name: mahesh, Roll No: 5, branch: cse, Marks: 300, CGPA: 7.0
+Name: ramteja, Roll No: 3, branch: mech, Marks: 444, CGPA: 9.99
+Name: kiran, Roll No: 1, branch: eee, Marks: 499, CGPA: 8.0
+Name: komesh, Roll No: 2, branch: cse, Marks: 499, CGPA: 9.8
+Name: jaideep, Roll No: 4, branch: cse, Marks: 500, CGPA: 9.8
+1.SortByRollnoAscending
+2.SortByRollnoDescending
+3.SortByNameAscending
+4.SortByNameDescending
+5.SortByBranchAscending
+6.SortByBranchDescending
+7.SortByMarksAscending
+8.SortByMarksDescending
+9.SortByCgpaAscending
+10.SortByCgpaDescending
+11.Exit
+Enter sorting CHOICE :
+8
+After Sorting
+Name: jaideep, Roll No: 4, branch: cse, Marks: 500, CGPA: 9.8
+Name: kiran, Roll No: 1, branch: eee, Marks: 499, CGPA: 8.0
+Name: komesh, Roll No: 2, branch: cse, Marks: 499, CGPA: 9.8
+Name: ramteja, Roll No: 3, branch: mech, Marks: 444, CGPA: 9.99
+Name: mahesh, Roll No: 5, branch: cse, Marks: 300, CGPA: 7.0
+1.SortByRollnoAscending
+2.SortByRollnoDescending
+3.SortByNameAscending
+4.SortByNameDescending
+5.SortByBranchAscending
+6.SortByBranchDescending
+7.SortByMarksAscending
+8.SortByMarksDescending
+9.SortByCgpaAscending
+10.SortByCgpaDescending
+11.Exit
+Enter sorting CHOICE :
+9
+After Sorting
+Name: mahesh, Roll No: 5, branch: cse, Marks: 300, CGPA: 7.0
+Name: kiran, Roll No: 1, branch: eee, Marks: 499, CGPA: 8.0
+Name: jaideep, Roll No: 4, branch: cse, Marks: 500, CGPA: 9.8
+Name: komesh, Roll No: 2, branch: cse, Marks: 499, CGPA: 9.8
+Name: ramteja, Roll No: 3, branch: mech, Marks: 444, CGPA: 9.99
+1.SortByRollnoAscending
+2.SortByRollnoDescending
+3.SortByNameAscending
+4.SortByNameDescending
+5.SortByBranchAscending
+6.SortByBranchDescending
+7.SortByMarksAscending
+8.SortByMarksDescending
+9.SortByCgpaAscending
+10.SortByCgpaDescending
+11.Exit
+Enter sorting CHOICE :
+10
+After Sorting
+Name: ramteja, Roll No: 3, branch: mech, Marks: 444, CGPA: 9.99
+Name: jaideep, Roll No: 4, branch: cse, Marks: 500, CGPA: 9.8
+Name: komesh, Roll No: 2, branch: cse, Marks: 499, CGPA: 9.8
+Name: kiran, Roll No: 1, branch: eee, Marks: 499, CGPA: 8.0
+Name: mahesh, Roll No: 5, branch: cse, Marks: 300, CGPA: 7.0
+1.SortByRollnoAscending
+2.SortByRollnoDescending
+3.SortByNameAscending
+4.SortByNameDescending
+5.SortByBranchAscending
+6.SortByBranchDescending
+7.SortByMarksAscending
+8.SortByMarksDescending
+9.SortByCgpaAscending
+10.SortByCgpaDescending
+11.Exit
+Enter sorting CHOICE :
+11

@@ -1,0 +1,143 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Fibonacciprobs{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        ArrayList<Integer> al =new ArrayList<>();
+        System.out.println("Enter  number  :");
+        int n=sc.nextInt();
+
+        System.out.println("Nth fibo number : ");
+        System.out.println(nthfibanocci(n));
+
+        System.out.println("all fibonical numbers :");
+        fibonaccinumbers(n);
+
+        System.out.println("\nUsing return type All fibonical numbers :");
+        al.addAll(allfibonumbers(n));
+        for(int i:al){
+            System.out.print(i+" ");
+        }
+        System.out.println("\nupto n fibonacci numbers :");
+        uptonfibos(n);
+
+        System.out.println("\nfibonnaci or not T:O(n) : ");
+        System.out.println(verifyfiboornot1(n));
+
+        System.out.println("fibonnaci or not T:O(1) : ");
+        System.out.println(verifyfiboornot2(n));
+
+        System.out.println("Previous fibonnical no : ");
+        System.out.println(prevfibono(n));
+        
+        System.out.println("Fibonnical Sum T:O(n) : ");
+        System.out.println(fibosum(n));
+
+        System.out.println("Fibonnical Sum (without using sum variable) : ");
+        System.out.println(fibosum1(n));
+    }
+    static int nthfibanocci(int n){
+        if(n==0) return 0;
+        if(n==1) return 1;
+        int a=0,b=1,c=0;
+        for(int i=2;i<=n;i++){
+            c=a+b;
+            a=b;
+            b=c;
+        }
+        return c;
+    }
+    static void fibonaccinumbers(int n){
+        if(n==0) System.out.println(0);
+        else if(n==1) System.out.println(0+" "+1);
+        else{
+            int a=0,b=1,c=0;
+            System.out.print(a+" "+b);
+            for(int i=3;i<=n;i++){
+                c=a+b;
+                System.out.print(" "+c);
+                a=b;
+                b=c;
+            }
+        }
+    }
+    static ArrayList<Integer> allfibonumbers(int n){
+        ArrayList<Integer> al=new ArrayList<>();
+        if(n==0) {
+            al.add(0);
+            return al;
+        }
+        else if(n==1){
+            al.add(0);
+            al.add(1);
+            return al;
+        }
+        else{
+            int a=0,b=1,c=0;
+            al.add(a);
+            al.add(b);
+            for(int i=3;i<=n;i++){
+                c=a+b;
+                al.add(c);
+                a=b;
+                b=c;
+            }
+        }
+        return al;
+    }
+    static void uptonfibos(int n){
+        if(n==0) System.out.println(0);
+        else{
+            int a=0,b=1,c=0;
+            System.out.print(a+" "+b);
+            while (c<n) { 
+                c=a+b;
+                System.out.print(" "+c);
+                a=b;
+                b=c;
+            }
+        }
+    }
+    static boolean verifyfiboornot1(int n){
+        if(n==0||n==1) return true;
+        int a=0,b=1,c=0;
+        while (c<=n) { 
+            c=a+b;
+            if(c==n) return true;
+            a=b;
+            b=c;
+        }
+        return false;
+    }
+    static boolean  verifyfiboornot2(int n){
+        return Math.floor((5*n*n)-4)==Math.ceil((5*n*n)-4)||Math.floor((5*n*n)+4)==Math.ceil((5*n*n)+4)?true:false;
+    }
+    static int prevfibono(int n){
+        return (n*2/(1+(int)Math.sqrt(5)));
+    }
+    static int fibosum(int n){
+        int sum=0;
+        if(n==0) return 0;
+        else if(n==1) return 1;
+        else{
+            int a=0,b=1,c=0;
+            sum+=a+b;
+            for(int i=2;i<=n;i++){
+                c=a+b;
+                sum+=c;
+                a=b;
+                b=c;
+            }
+        }
+        return sum;
+    }
+    static int fibosum1(int n){
+        int a=0,b=1,c=0;
+        for(int i=2;i<=n+2;i++){
+            c=a+b;
+            a=b;
+            b=c;
+        }
+        return c-1;
+    }
+} 

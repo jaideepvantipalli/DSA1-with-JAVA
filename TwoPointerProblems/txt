@@ -1,0 +1,67 @@
+
+11. Move zeros to end
+Using two pointer
+
+Dear Students 
+Today as part of competitive coding, we have discussed the following coding problems based on two pointer algorithm 
+
+Today's problems are.. 
+
+TWO SUM PROBLEM AND FIND ALL PAIRS : 
+
+1. You are given an array of n integers which are distinct and unsorted. Now, we are also given a target. Find and return all pairs where sum equals to target. ( 3 methods ) . 
+Using brute force 
+Using two pointer
+Using HashMap
+
+2. We are given an array of n integers which are distinct and sorted. Now, we are also given a target. Find and return all the pairs where sum equals to target. - 3 methods
+Using brute force 
+Using two pointer 
+Using HashMap 
+
+TWO SUM PROBLEM, COUNT ALL PAIRS:
+
+3. We are given an array of n integers which are distinct and unsorted and we also given a target. Now find count of all pairs where sum equals to target. -3 methods 
+Using brute force 
+Using two pointer 
+Using HashMap 
+
+4. Same problem with sorted data. -3 methods
+
+Using brute force 
+Using two pointer 
+Using HashMap 
+
+TWO SUM PROBLEM AND FIND ALL PAIRS : ( with duplicates) 
+
+5. We are given an array of n integers Which contains duplicates and also given a target. Find and return all pairs where sum equals to target-2 methods
+Using brute force
+Using HashMap 
+
+6. We are given an array of n integers Which contains duplicates and also given a target. Find count of all pairs where sum equals to target-2 methods
+Using brute force
+Using HashMap 
+
+SORT AN ARRAY OF 0'S , 1'S, 2'S :
+
+7. We are given an array of n elements which are zeroes, ones, twos. Now sort the elements and return array.( 2 methods  ). 
+Using counting method
+Using DNF algorithm 
+
+8. You are given char array with w, b, r balls. Sort them in according to order where white followed by blue followed by red. -(
+ 2 methods  ). 
+Using counting method
+Using DNF algorithm 
+
+SORT ARRAY BY PARITY: 
+
+9. We are given array of numbers ( integers) .now move all even numbers to beginning of array and all odd numbers placed after even numbers. Return modified array. ( 2 methods). 
+Using segeragation
+Using two pointer 
+
+REMOVE DUPLICATE CONSECUTIVE CHARACTERS IN A GIVEN STRING : 
+
+
+10. you are given a strong that contains only uppercase alphabets. Remove consecutive duplicate characters in it and return the string. ( 2 methods).
+Using two pointer 
+Using Stack

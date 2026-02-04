@@ -1,0 +1,230 @@
+import java.util.*;
+public class UisngSeiveMethod {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number to print prime upto N");
+        int n=sc.nextInt();
+        boolean[] arr=new boolean[n+1];
+        Arrays.fill(arr,true);
+        arr[0]=false;
+        arr[1]=false;
+        for(int i=2;i*i<=n;i++){
+            if(arr[i]==true){
+                for(int j=i*i;j<=n;j=j+i)
+                    arr[j]=false;
+            }
+        }
+        System.out.println("Using Sieve Method prime numbers : ");
+        for(int i=0;i<n;i++){
+            if(arr[i]==true)
+            System.out.print(i+" ");
+        }
+    }
+}
+
+/*9. Find sum of powers of prime factors of given number*/
+import java.util.*;
+public class SumofPowersPrimeFactors {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number to find Prime Factors : ");
+        int n=sc.nextInt();
+        System.out.println("Prime Factors sum is :"+primefactors(n));
+    }
+    static int primefactors(int n){
+        ArrayList<Integer> al=new ArrayList<>();
+        while (n%2==0) { 
+            al.add(2);
+            n/=2;
+        }
+        for(int i=3;i*i<=n;i+=2){
+            while (n%i==0) { 
+                al.add(i);
+                n/=i;
+            }
+        }
+        if(n>1){
+        al.add(n);
+        }
+        return al.size();
+    }
+}
+
+import java.util.*;
+public class PrimeOrNot {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number to Check : ");
+        int num=sc.nextInt();
+        boolean m1=isprimemethod1(num);
+        boolean m2=isprimemethod2(num);
+        boolean m3=isprimemethod3(num);
+        boolean m4=isprimemethod4(num);
+        boolean m5=isprimemethod5(num);
+        printprime(m1,1);
+        printprime(m2,2);
+        printprime(m3,3);
+        printprime(m4,4);
+        printprime(m5,5);
+        sc.close();
+    }
+    static boolean isprimemethod1(int n){
+        int c=0;
+        for(int i=1;i<=n;i++){
+            if(n%i==0) c++;
+        }
+        return c==2?true:false;//O(N)
+    }
+        static boolean isprimemethod2(int n){
+            if(n<=1) return false;
+        int c=1;
+        for(int i=1;i*i<=n;i++){
+            if(n%i==0){
+                c++;
+            }
+        }return c==1?true:false;//O(sqrt(N))
+    }
+        static boolean isprimemethod3(int n){
+        int c=1;
+        for(int i=1;i<=n/2;i++){
+            if(n%i==0){
+                c++;
+            }
+        }
+        if(c==2) return true;//O(N/2)
+        else return false;
+    }
+        static boolean isprimemethod4(int n){
+        if(n<=1)return false;
+        for(int i=2;i*i<=n;i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;//O(<sqrt(N))
+    }
+        static boolean isprimemethod5(int n){
+        if(n<=1) return false;
+        if(n==2||n==3)return true;
+        if(n%2==0||n%3==0)return false;
+        for(int i=5;i*i<=n;i=i+6){
+            if(n%i==0||n%(i+2)==0){
+                return false;
+            }
+        }
+        return true;//O(<<Sqrt(N))
+        }
+        static void printprime(boolean var,int mno){
+            if (var) {
+                System.out.println("using method "+mno+" Prime number");
+            }
+            else
+            System.out.println("using method "+mno+" not a Prime number");
+        }
+}
+
+/*Find and display all prime factors of n*/
+import java.util.Scanner;
+
+public class Primefactors {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number to find Prime Factors : ");
+        int n=sc.nextInt();
+        System.out.println("Prime Factors :");
+        while (n%2==0) { 
+            System.out.print(2+" ");
+            n/=2;
+        }
+        for(int i=3;i*i<=n;i+=2){
+            while (n%i==0) { 
+                System.out.print(i+" ");
+                n/=i;
+            }
+        }
+        if(n>1) System.out.print(n);
+    }
+}
+
+/* to find primes and thier powers stiring in nested arraylist*/
+import java.util.ArrayList;
+import java.util.Scanner;
+public class PrimeAndPowersofPrime {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        ArrayList<ArrayList<Integer>> al=new ArrayList<>();
+        System.out.println("Enter a number to find Prime Factors : ");
+        int n=sc.nextInt();
+        System.out.println("Prime Factors :");
+        al.addAll(primefactors(n));
+        System.out.print(al);
+        sc.close();
+    }
+    static ArrayList<ArrayList<Integer>> primefactors(int n){
+        ArrayList<ArrayList<Integer>> al=new ArrayList<>();
+        int c=0;
+        while (n%2==0) { 
+            c++;
+            n/=2;
+        }
+        if(c>0){
+            ArrayList<Integer> sl=new ArrayList<>();
+            sl.add(2);
+            sl.add(c);
+            al.add(sl);
+        }
+        for(int i=3;i*i<=n;i+=2){
+            c=0;
+            while (n%i==0) { 
+                c++;
+                n/=i;
+            }
+        }
+         if(c>0){
+            ArrayList<Integer> sl=new ArrayList<>();
+            sl.add(2);
+            sl.add(c);
+            al.add(sl);
+        }
+        if(n>1){
+            ArrayList<Integer> sl=new ArrayList<>();
+            sl.add(n);
+            sl.add(1);
+            al.add(sl);
+        }
+        return al;
+    }
+}
+
+/*8. Find and return all prime factors of n as ArrayList */
+import java.util.*;
+public class ArraylistPrimefactors {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        ArrayList<Integer> al=new ArrayList<>();
+        System.out.println("Enter a number to find Prime Factors : ");
+        int n=sc.nextInt();
+        System.out.println("Prime Factors :");
+        al.addAll(primefactors(n));
+        for(int x:al)
+        System.out.print(x+" ");
+        sc.close();
+    }
+    static ArrayList<Integer> primefactors(int n){
+        ArrayList<Integer> al=new ArrayList<>();
+        while (n%2==0) { 
+            al.add(2);
+            n/=2;
+        }
+        for(int i=3;i*i<=n;i+=2){
+            while (n%i==0) { 
+                al.add(i);
+                n/=i;
+            }
+        }
+        if(n>1){
+        al.add(n);
+        }
+        return al;
+    }
+}
